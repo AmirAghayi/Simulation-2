@@ -1,0 +1,17 @@
+.Logo {
+  height: 22px;
+  margin-left: 25%;
+  margin-top: 17px;
+}
+
+.Header-Text {
+  margin-left: 10px;
+  font-size: 24px;
+}
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  color: aliceblue;
+  background-color: rgb(11, 133, 96);
+}

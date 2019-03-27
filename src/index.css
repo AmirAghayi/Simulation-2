@@ -5,10 +5,20 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(140, 175, 108);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.main-content {
+  background-color: rgb(106, 211, 180);
+  height: calc(100vh - 61px);
+  width: 800px;
+  margin: 0px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
 }

@@ -1,0 +1,18 @@
+.Dashboard{
+    background-color: rgb(103, 197, 158);
+   
+}
+
+.Add_Property_button{
+    background-color: chartreuse;
+    border: 0ch;
+    font-size: 14px;
+    font-weight: bold;
+    height: 30px;
+    width: 150px;
+}
+
+.Add_Property_button:hover{
+    cursor: pointer;
+    
+}
