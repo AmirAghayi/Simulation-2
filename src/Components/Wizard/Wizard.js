@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Wizard.css";
+import axios from 'axios';
 
 
 class Wizard extends Component {
@@ -54,11 +55,8 @@ class Wizard extends Component {
 
 
 
-
-
-
-
   render() {
+
     return (
       <div className="Wizard main-content">
         <div className="Add-Listing">

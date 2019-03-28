@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 
 
 
+
 let {
     DB_CONNECTION_STRING,
     PORT
@@ -25,6 +26,17 @@ massive(DB_CONNECTION_STRING, { scripts: __dirname + '/db' })
 }).catch(err => {
     console.log(err)
 })
+
+
+
+
+app.get('/api/houses', controller.getAll)
+
+
+
+
+
+
 
 
 
