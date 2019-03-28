@@ -16,7 +16,7 @@ code {
 .main-content {
   background-color: rgb(193, 248, 225);
   height: calc(100vh - 61px);
-  width: 800px;
+  width: 60%;
   margin: 0px auto;
   padding: 20px;
   box-sizing: border-box;
