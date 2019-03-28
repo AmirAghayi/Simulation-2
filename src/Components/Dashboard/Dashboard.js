@@ -47,13 +47,25 @@ class Dashboard extends Component {
 
     return (
       <div className="Dashboard">
-        <div className="Dashboard-title" >{mappedHouseList}</div>
+            
+            <div className="Dashboard_header">
+                <h1 className="Dashboard_title">Dashboard</h1>
+                <Link to="/Wizard">
+                  <button className="Add_Property_button"> Add New Property </button>
+                </Link>
+            </div>
+            
+            <div className="dividing-line">
+                 <hr />
+            </div>
+            
+            <div className="home_listing">
+                <p>Home Listing</p>
+            </div>
+            
+            <div className="houses_list" >{mappedHouseList}</div>
 
-        <Link to="/Wizard">
-          <button className="Add_Property_button"> Add New Property </button>
-        </Link>
-
-        <hr className="dividing-line"/>
+        
       </div>
     );
   }

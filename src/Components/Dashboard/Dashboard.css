@@ -1,18 +1,50 @@
 .Dashboard{
-    background-color: rgb(103, 197, 158);
-   
+    background-color: rgb(193, 248, 225);
+    margin-top: 0%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 490px;
+}
+
+.Dashboard_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(193, 248, 225);
+}
+
+.Dashboard_title{
+  margin-left: 30px;
 }
 
 .Add_Property_button{
-    background-color: chartreuse;
+    background-color: rgb(109, 238, 24);
     border: 0ch;
     font-size: 14px;
     font-weight: bold;
     height: 30px;
     width: 150px;
+    margin-right: 30px;
 }
 
 .Add_Property_button:hover{
     cursor: pointer;
     
+}
+
+.dividing-line{
+  margin-top: 0%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+.houses_list{
+    margin: 20px;
+}
+
+.home_listing{
+    text-align: left;
+    margin-left: 60px;
+    font-weight: bold;
 }
