@@ -53,6 +53,37 @@ class Wizard extends Component {
 
 
 
+  resetState = () => {
+    this.setState({
+      name: "",
+      address: "",
+      city: "",
+      state: "",
+      zipcode: ""
+    });
+  };
+
+
+  
+  createHouse = () => {
+    const { name, address, city, state, zipcode } = this.state;
+    const house = {
+      name,
+      address,
+      city,
+      state,
+      zipcode
+    }
+
+    axios.post('api/house', house)
+    .then(response => {
+         this.props.history.push('/');
+    });
+    
+    this.resetState();
+  };
+
+
 
 
   render() {
@@ -135,7 +166,10 @@ class Wizard extends Component {
 
         <div>
           <Link to="/">
-            <button className="complete-button" >Complete</button>
+            <button 
+            className="complete-button"
+            onClick={this.createHouse}
+            >Complete</button>
           </Link>
         </div>
       </div>

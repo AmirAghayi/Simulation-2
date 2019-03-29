@@ -5,8 +5,20 @@ module.exports ={
         .then( response => {
             res.status(200).send(response);
         }).catch((err) => {
-            consolke.log('getAll:', err)
+            console.log('getAll:', err)
         });
+    },
+
+    newHouse: (req,res) => {
+        const {property_name, address, city, state, zip } = req.body; 
+        const db = req.app.get('db')
+
+        db.create_house([property_name, address, city, state, zip])
+        .then( response => {
+            res.status(200).send('Created a House');
+        }).catch((err) => {
+              console.log('newHouse:', err)
+        })
     }
 
 }
