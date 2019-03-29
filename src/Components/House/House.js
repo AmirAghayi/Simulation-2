@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import "./House.css";
 
 export default function house(props) {
-  const { house } = props;
+  const { removeHouse, house} = props;
+  
 
   return (
     <div className="House">
@@ -16,7 +17,11 @@ export default function house(props) {
       </div>
       
       <div className="close_button">
-        <button className="close-btn" type="button">
+        <button 
+        className="close-btn" 
+        type="button"
+        onClick={() => removeHouse (house.id)}
+        >
           <span  aria-hidden="true">&times;</span>
         </button>
       </div>

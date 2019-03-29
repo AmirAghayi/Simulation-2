@@ -32,6 +32,7 @@ massive(DB_CONNECTION_STRING, { scripts: __dirname + '/db' })
 
 app.get('/api/houses', controller.getAll)
 app.post('/api/house', controller.newHouse)
+app.delete('/api/house/:id', controller.removeHouse)
 
 
 

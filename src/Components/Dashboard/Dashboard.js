@@ -30,7 +30,13 @@ class Dashboard extends Component {
   }
 
 
-
+  removeHouse = id => {
+    console.log(id)
+    axios.delete(`/api/house/${id}`)
+      .then(response => {
+         this.getHouses();
+    });
+  };
 
 
 
@@ -40,6 +46,7 @@ class Dashboard extends Component {
              <House
              key={house.id}
              house={house}
+             removeHouse={this.removeHouse}
              />
             );
     });

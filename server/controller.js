@@ -19,6 +19,19 @@ module.exports ={
         }).catch((err) => {
               console.log('newHouse:', err)
         })
+    },
+
+    removeHouse: (req,res) => {
+        const db = req.app.get('db')
+        const {id} = req.params;
+
+
+        db.remove_house([id])
+        .then( response => {
+            res.status(200).send('It is gone!');
+        }).catch( err => {
+            console.log('removeHouse:', err)
+        });
     }
 
 }
