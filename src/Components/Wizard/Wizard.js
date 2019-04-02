@@ -9,7 +9,7 @@ class Wizard extends Component {
     super();
 
     this.state = {
-      name: "",
+      property_name: "",
       address: "",
       city: "",
       state: "",
@@ -21,7 +21,7 @@ class Wizard extends Component {
 
   handlePropertyNameChange = event => {
         this.setState({
-          name: event.target.value
+          property_name: event.target.value
         });
   };
 
@@ -55,7 +55,7 @@ class Wizard extends Component {
 
   resetState = () => {
     this.setState({
-      name: "",
+      property_name: "",
       address: "",
       city: "",
       state: "",
@@ -66,9 +66,9 @@ class Wizard extends Component {
 
   
   createHouse = () => {
-    const { name, address, city, state, zipcode } = this.state;
+    const { property_name, address, city, state, zipcode } = this.state;
     const house = {
-      name,
+      property_name,
       address,
       city,
       state,
@@ -105,7 +105,7 @@ class Wizard extends Component {
               type="text"
               className="prop-name-input" 
               placeholder="Property Name" 
-              value={this.state.name}
+              value={this.state.property_name}
               onChange={this.handlePropertyNameChange}
               />
         </div>
