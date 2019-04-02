@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./House.css";
 
 export default function house(props) {

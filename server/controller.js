@@ -15,7 +15,7 @@ module.exports ={
 
         db.create_house([property_name, address, city, state, zip])
         .then( response => {
-            res.status(200).send('Created a House');
+            res.status(200).send('all good');
         }).catch((err) => {
               console.log('newHouse:', err)
         })
@@ -28,7 +28,7 @@ module.exports ={
 
         db.remove_house([id])
         .then( response => {
-            res.status(200).send('It is gone!');
+            res.status(200).send('all good');
         }).catch( err => {
             console.log('removeHouse:', err)
         });

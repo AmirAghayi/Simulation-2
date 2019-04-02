@@ -24,98 +24,8 @@
 }
 
 
-.property-name{
-    display: flexbox;
-    flex-direction: column;
-    
-}
-
-.prop-name-title{
-    
-     margin-bottom: 0%;
-     font-weight: bold;
-}
-
-.prop-name-input{
-    width: 280px;
-    margin-left: 0px;
-}
-
-.Address{
-    display: flex;
-    flex-direction: column;
-}
-
-.address-title{
-
-    margin-bottom: 0%;
-    font-weight: bold;
-}
-
-.address-input{
-    width: 500px;
-    margin-left: 0px;
-}
 
 
-
-.city{
-    display: flex;
-    flex-direction: column;
-}
-
-.city-title{
-    margin-bottom: 0%;
-    font-weight: bold;
-}
-
-.city-input{
-    width: 180px;
-    margin-left: 0px;
-}
-
-
-
-.state{
-    width: 180px;
-    margin-left: 60px;
-}
-
-
-.state-title{
-    margin-bottom: 0%;
-    font-weight: bold;
-    margin-left: 20px;
-}
-
-.state-input{
-    width: 180px;
-    margin-left: 20px;
-}
-
-.zip{
-    width: 180px;
-    margin-left: 60px;
-}
-
-.zip-title{
-    margin-bottom: 0%;
-    font-weight: bold;
-    margin-left: 20px;
-}
-
-
-
-.zip-input{
-    width: 180px;
-    margin-left: 20px;
-}
-
-
-
-.last-three{
-    display: flex;
-}
 
 
 .complete-button {
@@ -131,5 +41,21 @@
 }
 
 .complete-button:hover{
+    cursor: pointer;
+}
+
+.next-step {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    background-color: chartreuse;
+    height: 40px;
+    width: 90px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 0ch;
+}
+
+.next-step:hover{
     cursor: pointer;
 }
