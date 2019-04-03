@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import "./Wizardstep3.css";
 import axios from 'axios';
 
@@ -96,16 +97,28 @@ class Wizardstep3 extends Component {
                 />
           </div>
 
-          <div>
+           <div>
+                <div  className="previous-step-button">
+                   <Link to="/Wizard/step2">
+                       <button>Previous Step</button>
+                   </Link>
+                   
+                </div>
+
+                <div>
             
-            <button 
-            className="complete-button"
-            onClick={this.createHouse}
-            >Complete
-            </button>
+                    <button 
+                    className="complete-button"
+                    onClick={this.createHouse}
+                    >Complete
+                    </button>
           
 
-          </div>
+                </div>
+
+           </div>
+
+                
 
           
         </div>

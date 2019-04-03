@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import "./Wizardstep1.css";
 
 
@@ -132,11 +133,13 @@ class Wizardstep1 extends Component {
           </div>
 
             <div>
+              <Link to="/Wizard/step2">
                     <button 
-                    className="next-step"
+                    className="next-step"x
                     >
                     Next Step
                     </button> 
+              </Link>
             </div>
         </div>
       );

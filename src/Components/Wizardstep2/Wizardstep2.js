@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import "./Wizardstep2.css";
 
 
@@ -51,6 +52,22 @@ class Wizardstep2 extends Component {
                 />
           </div>
   
+          <div className="buttons">
+               <div  className="previous-step-button">
+                   <Link to="/Wizard/step1">
+                       <button>Previous Step</button>
+                   </Link>
+                   
+               </div>
+               
+               <div  className="next-step-button">
+                  <Link to="/Wizard/step3">
+                      <button>Next Step</button>
+                  </Link>
+                   
+               </div>
+                
+          </div>
           
         </div>
       );
