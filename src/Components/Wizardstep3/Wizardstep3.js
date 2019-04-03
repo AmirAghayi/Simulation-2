@@ -10,12 +10,12 @@ import axios from 'axios';
 
 
 class Wizardstep3 extends Component {
-    constructor() {
-      super();
+    constructor(props) {
+      super(props);
   
       this.state = {
-        monthlyMortgageAmount: 0,
-        desiredMonthlyRent: 0
+        monthlyMortgageAmount: props.monthlyMortgageAmount || 0,
+        desiredMonthlyRent: props.desiredMonthlyRent || 0
       }
 
     }
@@ -51,16 +51,27 @@ class Wizardstep3 extends Component {
 
 
     createHouse = () => {
-        const { property_name, address, city, state, zipcode } = this.state;
+        const {
+          property_name,
+          address,
+          city,
+          state,
+          zipcode,
+          imageUrl,
+        } = this.props;
+        const { monthlyMortgageAmount, desiredMonthlyRent } = this.state;
         const house = {
           property_name,
           address,
           city,
           state,
-          zipcode
-        }
+          zipcode,
+          imageUrl,
+          monthlyMortgageAmount,
+          desiredMonthlyRent,
+        };
     
-        axios.post('api/house', house)
+        axios.post('/api/house', house)
         .then(response => {
              this.props.history.push('/');
         });
@@ -68,15 +79,15 @@ class Wizardstep3 extends Component {
       };
     
 
-handleDispatchers = () => {
-  this.props.updateMortgageamountType(this.state.updateMortgageamountType);
-  this.props.updateMonthlyrentType(this.state.updateMonthlyrentType);
+handleDisptchers = () => {
+  this.props.updateMortgageamountType(this.state.monthlyMortgageAmount);
+  this.props.updateMonthlyrentType(this.state.desiredMonthlyRent);
 }
 
 
     
     render() {
-  
+      console.log(this.props)
       return (
         <div className="main-content">
           
@@ -106,7 +117,7 @@ handleDispatchers = () => {
            <div>
                 <div  className="previous-step-button">
                    <Link to="/Wizard/step2">
-                       <button>Previous Step</button>
+                       <button onClick={this.handleDisptchers}>Previous Step</button>
                    </Link>
                    
                 </div>

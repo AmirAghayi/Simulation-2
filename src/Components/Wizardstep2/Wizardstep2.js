@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { updateImageurlType} from '../../redux/reducers/reducer';
+import { updateImageurlType } from '../../redux/reducers/reducer';
 import "./Wizardstep2.css";
 
 
@@ -20,9 +20,9 @@ class Wizardstep2 extends Component {
   
   
     handleimageUrlChange = event => {
-          this.setState({
-            imageuRL: event.target.value
-          });
+      this.setState({
+        imageUrl: event.target.value
+      });
     };
   
    
@@ -53,12 +53,12 @@ handleDispatchers = () => {
           <div className="imageUrl">
               <p className="imageUrl-title">Image URL</p>
                 <input 
-                type="text"
-                className="imageUrl-input" 
-                placeholder="Image URL" 
-                value={this.state.imageUrl}
-                onChange={this.handleimageUrlChange}
-                />
+                  type="text"
+                  className="imageUrl-input" 
+                  placeholder="Image URL" 
+                  value={this.state.imageUrl}
+                  onChange={this.handleimageUrlChange}
+                  />
           </div>
   
           <div className="buttons">

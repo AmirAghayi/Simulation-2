@@ -22,34 +22,47 @@ const UPDATE_ZIPCODE_TYPE = "UPDATE_ZIPCODE_TYPE";
 const UPDATE_IMAGEURL_TYPE = "UPDATE_IMAGEURL_TYPE";
 const UPDATE_MORTGAGEAMOUNT_TYPE = "UPDATE_MORTGAGEAMOUNT_TYPE";
 const UPDATE_MONTHLYRENT_TYPE = "UPDATE_MONTHLYRENT_TYPE";
+const SET_ALL_NEW_HOUSE_DATA_TO_DEFAULTS = 'SET_ALL_NEW_HOUSE_DATA_TO_DEFAULTS';
 
 
 
 function reducer(state=initialState, action){
    switch (action.type){
        case UPDATE_PROPERTYNAME_TYPE:
-             return Object.assign({}, state, {propertynameType:action.payload});
+             return Object.assign({}, state, {property_name:action.payload});
 
         case UPDATE_ADDRESS_TYPE:
-             return Object.assign({}, state, {addressType:action.payload});
+             return Object.assign({}, state, {address:action.payload});
 
         case UPDATE_CITY_TYPE:
-             return Object.assign({}, state, {cityType:action.payload});
+             return Object.assign({}, state, {city:action.payload});
 
         case UPDATE_STATE_TYPE:
-             return Object.assign({}, state, {stateType:action.payload});
+             return Object.assign({}, state, {state:action.payload});
 
         case UPDATE_ZIPCODE_TYPE:
-             return Object.assign({}, state, {zipcodeType:action.payload});
+             return Object.assign({}, state, {zipcode:action.payload});
 
         case UPDATE_IMAGEURL_TYPE:
-            return Object.assign({}, state, {imageurlType:action.payload});
+            return Object.assign({}, state, {imageUrl:action.payload});
 
         case UPDATE_MORTGAGEAMOUNT_TYPE:
-            return Object.assign({}, state, {mortgageamountType:action.payload});
+            return Object.assign({}, state, {monthlyMortgageAmount:action.payload});
 
         case UPDATE_MONTHLYRENT_TYPE:
-            return Object.assign({}, state, {monthlyrentType:action.payload});
+            return Object.assign({}, state, {desiredMonthlyRent:action.payload});
+
+        case SET_ALL_NEW_HOUSE_DATA_TO_DEFAULTS:
+            return Object.assign({}, state, {
+                property_name: "",
+                address: "",
+                city: "",
+                state: "",
+                zipcode: "",
+                imageUrl: "",
+                monthlyMortgageAmount: 0,
+                desiredMonthlyRent: 0,
+            });
 
 
         default:
@@ -103,7 +116,7 @@ export function updateImageurlType(imageurlType){
 };
 
 
-export function updateMortgageamoutType(mortgageamountType){
+export function updateMortgageamountType(mortgageamountType){
     return {
         type:UPDATE_MORTGAGEAMOUNT_TYPE,
         payload:mortgageamountType
