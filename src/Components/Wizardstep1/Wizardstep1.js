@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { updatePropertynameType } from '../../redux/reducers/reducer';
+import { updateAddressType } from '../../redux/reducers/reducer';
+import { updateCityType } from '../../redux/reducers/reducer';
+import { updateStateType } from '../../redux/reducers/reducer';
+import { updateZipcodeType } from '../../redux/reducers/reducer';
 import "./Wizardstep1.css";
 
 
@@ -62,13 +68,23 @@ class Wizardstep1 extends Component {
         zipcode: ""
       });
     };
+
+
   
+    //Method to handle redux functions *- also known as dispatchers -*
+    handleDispatchers = () => {
+      this.props.updatePropertynameType(this.state.property_name);
+      this.props.updateAddressType(this.state.address);
+      this.props.updateCityType(this.state.city);
+      this.props.updateStateType(this.state.state);
+      this.props.updateZipcodeType(this.state.zipcode);
+    } 
   
     
     render() {
   
       return (
-        <div className="Wizard main-content">
+        <div className="main-content">
           
   
           <div className="property-name">
@@ -135,7 +151,7 @@ class Wizardstep1 extends Component {
             <div>
               <Link to="/Wizard/step2">
                     <button 
-                    className="next-step"x
+                    className="next-step" onClick={this.handleDispatchers}
                     >
                     Next Step
                     </button> 
@@ -145,5 +161,12 @@ class Wizardstep1 extends Component {
       );
     }
   }
-  
-  export default Wizardstep1;
+
+
+function mapStateToProps(state){
+     return state;
+};
+
+
+
+  export default connect( mapStateToProps, {updatePropertynameType, updateAddressType, updateCityType, updateStateType, updateZipcodeType}) (Wizardstep1);

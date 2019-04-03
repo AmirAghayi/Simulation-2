@@ -2,11 +2,21 @@
     position: relative;
 }
 
+.main-content {
+    background-color: rgb(193, 248, 225);
+    height: calc(100vh - 61px);
+    width: 60%;
+    margin: 0px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+  }
+  
 .Add-Listing{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 150px;
+    margin-left: 10%;
 }
 
 .Cancel-Button{
@@ -28,21 +38,7 @@
 
 
 
-.complete-button {
-    position: absolute;
-    right: 40px;
-    bottom: 40px;
-    background-color: chartreuse;
-    height: 40px;
-    width: 90px;
-    font-size: 14px;
-    font-weight: bold;
-    border: 0ch;
-}
 
-.complete-button:hover{
-    cursor: pointer;
-}
 
 .next-step {
     position: absolute;

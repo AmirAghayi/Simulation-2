@@ -15,7 +15,7 @@ export default function Wizard () {
 return (
 
   
-      <div className="Wizard main-content">
+      <div className="main-content">
 
             <div className="Add-Listing">
               <h1 className="Add-Listing-Title"> Add New Listing </h1>

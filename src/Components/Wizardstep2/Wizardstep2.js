@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { updateImageurlType} from '../../redux/reducers/reducer';
 import "./Wizardstep2.css";
 
 
@@ -35,10 +37,17 @@ class Wizardstep2 extends Component {
   
   
     
+handleDispatchers = () => {
+  this.props.updateImageurlType(this.state.imageUrl);
+}
+
+
+
+
     render() {
   
       return (
-        <div className="Wizard main-content">
+        <div className="main-content">
           
   
           <div className="imageUrl">
@@ -62,7 +71,9 @@ class Wizardstep2 extends Component {
                
                <div  className="next-step-button">
                   <Link to="/Wizard/step3">
-                      <button>Next Step</button>
+                      <button
+                      onClick={this.handleDispatchers}
+                      >Next Step</button>
                   </Link>
                    
                </div>
@@ -74,4 +85,10 @@ class Wizardstep2 extends Component {
     }
   }
   
-  export default Wizardstep2;
+
+function mapStateToProps(state){
+  return state;
+};
+
+
+  export default connect (mapStateToProps, {updateImageurlType})(Wizardstep2);

@@ -1,0 +1,71 @@
+
+
+.main-content {
+    background-color: rgb(193, 248, 225);
+    height: calc(100vh - 61px);
+    width: 60%;
+    margin: 0px auto;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: left;
+    margin-left: 20%;
+  }
+
+.monthly-mortgage{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.monthly-mortgage-title{
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+
+.monthly-mortgage-input{
+    width: 480px;
+    margin-left: 0px;
+}
+
+.desired-rent{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.desired-rent-title{
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+
+.desired-rent-input{
+    width: 480px;
+    margin-left: 0px;
+}
+
+
+.complete-button {
+    position: absolute;
+    right: 25%;
+    bottom: 40px;
+    background-color: chartreuse;
+    height: 40px;
+    width: 90px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 0ch;
+}
+
+.complete-button:hover{
+    cursor: pointer;
+}
+
+
+.previous-step-button{
+    background-color:  chartreuse;
+    height: 40px;
+    width: 90px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 0ch;
+}

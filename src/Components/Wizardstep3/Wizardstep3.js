@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { updateMortgageamountType } from '../../redux/reducers/reducer';
+import { updateMonthlyrentType } from '../../redux/reducers/reducer';
 import "./Wizardstep3.css";
 import axios from 'axios';
 
@@ -65,14 +68,17 @@ class Wizardstep3 extends Component {
       };
     
 
-
+handleDispatchers = () => {
+  this.props.updateMortgageamountType(this.state.updateMortgageamountType);
+  this.props.updateMonthlyrentType(this.state.updateMonthlyrentType);
+}
 
 
     
     render() {
   
       return (
-        <div className="Wizard main-content">
+        <div className="main-content">
           
   
           <div className="monthly-mortgage">
@@ -126,4 +132,11 @@ class Wizardstep3 extends Component {
     }
   }
   
-  export default Wizardstep3;
+
+function mapStateToProps(state){
+  return state;
+}
+
+
+
+  export default connect (mapStateToProps, {updateMortgageamountType, updateMonthlyrentType}) (Wizardstep3);
