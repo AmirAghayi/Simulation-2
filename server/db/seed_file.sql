@@ -4,5 +4,8 @@ CREATE TABLE houses(
     address VARCHAR (25),
     city TEXT,
     state TEXT,
-    zip INTEGER
+    zip INTEGER,
+    image TEXT,
+    monthly_mortgage_amount INTEGER,
+    desired_rent INTEGER
 )

@@ -53,7 +53,6 @@ handleDispatchers = () => {
           <div className="imageUrl">
               <p className="imageUrl-title">Image URL</p>
                 <input 
-                  type="text"
                   className="imageUrl-input" 
                   placeholder="Image URL" 
                   value={this.state.imageUrl}

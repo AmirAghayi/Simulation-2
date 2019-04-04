@@ -10,10 +10,10 @@ module.exports ={
     },
 
     newHouse: (req,res) => {
-        const {property_name, address, city, state, zipcode } = req.body; 
+        const {property_name, address, city, state, zipcode, imageUrl, monthlyMortgageAmount, desiredMonthlyRent } = req.body; 
         const db = req.app.get('db')
 
-        db.create_house([property_name, address, city, state, zipcode])
+        db.create_house([property_name, address, city, state, zipcode, imageUrl, monthlyMortgageAmount, desiredMonthlyRent])
         .then( response => {
             res.status(200).send('all good');
         }).catch((err) => {

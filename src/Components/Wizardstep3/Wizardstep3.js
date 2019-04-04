@@ -124,11 +124,14 @@ handleDisptchers = () => {
 
                 <div>
             
-                    <button 
-                    className="complete-button"
-                    onClick={this.createHouse}
-                    >Complete
-                    </button>
+                  <Link to="/">
+                      <button 
+                      className="complete-button"
+                      onClick={this.createHouse}
+                      >Complete
+                      </button>
+                  </Link>
+                   
           
 
                 </div>
