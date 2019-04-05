@@ -61,16 +61,17 @@ handleDispatchers = () => {
           </div>
   
           <div className="buttons">
-               <div  className="previous-step-button">
+               <div  >
                    <Link to="/Wizard/step1">
-                       <button>Previous Step</button>
+                       <button className="previous-step-button">Previous Step</button>
                    </Link>
                    
                </div>
                
-               <div  className="next-step-button">
+               <div  >
                   <Link to="/Wizard/step3">
                       <button
+                      className="next-step-button"
                       onClick={this.handleDispatchers}
                       >Next Step</button>
                   </Link>
