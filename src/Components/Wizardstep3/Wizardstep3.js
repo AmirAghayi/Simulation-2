@@ -116,9 +116,11 @@ handleDisptchers = () => {
           </div>
 
            <div>
-                <div  className="previous-step-button">
+                <div  className="previous-step-button_div">
                    <Link to="/Wizard/step2">
-                       <button onClick={this.handleDisptchers}>Previous Step</button>
+                       <button
+                       className="previous-step-button" 
+                       onClick={this.handleDisptchers}>Previous Step</button>
                    </Link>
                    
                 </div>

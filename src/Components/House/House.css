@@ -7,26 +7,16 @@
     padding: 10px;
 }
 
-.property_name_tag{
-    margin: 10px;
+
+
+
+.image{
+    height: 270px;
+    width: 260px;
 }
 
-.address_tag{
-    margin: 10px;
-}
 
-.city_tag{
-    margin: 10px;
-}
 
-.state_tag{
-    margin: 10px;
-}
-
-.zip_tag{
-    margin: 10px;
-    
-}
 
 .close-btn:hover{
 cursor: pointer;
@@ -36,4 +26,10 @@ cursor: pointer;
    font-size: 20px;
    border: 0ch;
    background-color: lightgray;
+   
+}
+
+.close_button{
+    float:right;
+    padding-right: 10px;
 }
