@@ -109,6 +109,7 @@ export function updateZipcodeType(zipcodeType){
 
 
 export function updateImageurlType(imageurlType){
+    console.log(imageurlType);
     return {
         type:UPDATE_IMAGEURL_TYPE,
         payload:imageurlType

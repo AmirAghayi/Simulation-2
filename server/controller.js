@@ -10,6 +10,7 @@ module.exports ={
     },
 
     newHouse: (req,res) => {
+        console.log(req.body);
         const {property_name, address, city, state, zipcode, imageUrl, monthlyMortgageAmount, desiredMonthlyRent } = req.body; 
         const db = req.app.get('db')
 

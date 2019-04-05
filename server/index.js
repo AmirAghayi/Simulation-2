@@ -23,7 +23,6 @@ let {
 massive(DB_CONNECTION_STRING, { scripts: __dirname + '/db' })
 .then((dbInstance) => {
     app.set('db', dbInstance);
-    dbInstance.alter_table();
 }).catch(err => {
     console.log(err)
 })

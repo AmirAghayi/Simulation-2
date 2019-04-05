@@ -73,6 +73,7 @@ class Wizardstep3 extends Component {
     
         axios.post('/api/house', house)
         .then(response => {
+          console.log(response.data)
              this.props.history.push('/');
         });
         this.resetState();
