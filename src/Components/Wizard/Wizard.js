@@ -10,8 +10,8 @@ import Wizardstep3 from '../Wizardstep3/Wizardstep3';
 
 
 
-export default function Wizard () {
-  
+export default function Wizard (props) {
+  console.log(props.match)
 return (
 
   
@@ -26,9 +26,9 @@ return (
                   </Link>
             </div>
 
-                  <Route component={Wizardstep1} path="/Wizard/step1" />
-                  <Route component={Wizardstep2} path="/Wizard/step2" />
-                  <Route component={Wizardstep3} path="/Wizard/step3" />
+                  <Route component={Wizardstep1} path={props.match.path+'/step1'} />
+                  <Route component={Wizardstep2} path={props.match.path+'/step2'} />
+                  <Route component={Wizardstep3} path={props.match.path+'/step3'} />
 
       </div>
 
